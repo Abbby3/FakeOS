@@ -1,6 +1,17 @@
 * {
   margin: 0px;
   padding: 0px;
+  & h2 {
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  & h1 {
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  & p {
+    font-family: Tahoma, sans-serif;
+  }
 }
 
 body {
@@ -23,5 +34,139 @@ body {
       }
     }
   }
-  
+  & .loading {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    justify-content: center;
+    align-items: center;
+
+    &-logo {
+      width: min-content;
+      display: flex;
+      flex-direction: column;
+
+      &__top {
+        display: flex;
+        gap: 5%;
+        align-items: end;
+        & h2 {
+          font-size: 2.5vw;
+        }
+        & img {
+          width: 10vw;
+          margin-bottom: -5%;
+        }
+      }
+      & h1 {
+        margin-top: -5%;
+        font-size: 4.6vw;
+      }
+    }
+    &__bar {
+      padding: 0.3%;
+      width: 25%;
+      height: 3%;
+      border: 0.23vw solid gray;
+      border-radius: 0.5vw;
+      background-color: black;
+      display: flex;
+      align-items: center;
+      gap: 1%;
+      @keyframes load {
+        from {
+          left: 0%;
+        }
+        to {
+          left: 85%;
+        }
+      }
+      & div {
+        background-color: #6582f3;
+        height: 100%;
+        width: 6%;
+        position: relative;
+        animation: load 1.5s steps(12) infinite;
+      }
+    }
+  }
+  & .welcome {
+    height: 100%;
+    width: 100%;
+    background-color: #5a7edc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    & div {
+      width: 100%;
+      height: 15%;
+      background-color: #00309c;
+    }
+    & h1 {
+      font-style: italic;
+      margin-right: 30%;
+      font-size: 3vw;
+    }
+  }
+  & .desktop {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-image: url("../assets/background.png");
+    background-size: 100%;
+    &-menu {
+      width: 35%;
+      height: 50%;
+      position: absolute;
+      top: 26.7%;
+      background-color: #d3e5fa;
+      border: 0.1vw solid #00309c;
+      border-bottom: 3.5vw solid #00309c;
+      border-top: 4vw solid #00309c;
+      border-top-left-radius: 0.5vw;
+      border-top-right-radius: 0.5vw;
+    }
+
+    &-taskbar {
+      width: 100%;
+      height: 7%;
+      background-color: #00309c;
+      position: absolute;
+      top: 93%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      &__start {
+        border: none;
+        cursor: pointer;
+        height: 100%;
+        width: 15%;
+        background-color: #45a945;
+        border-top-right-radius: 1vw;
+        border-bottom-right-radius: 1vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        // justify-content: center;
+        gap: 5%;
+        & img {
+          width: 2vw;
+          height: 2vw;
+        }
+        & h2 {
+          font-style: italic;
+          font-size: 1.7vw;
+          margin-right: 25%;
+        }
+      }
+      &__time {
+        width: 15%;
+        background-color: #5a7edc;
+      }
+    }
+  }
 }
