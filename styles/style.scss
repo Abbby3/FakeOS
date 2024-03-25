@@ -12,12 +12,17 @@
   & p {
     font-family: Tahoma, sans-serif;
   }
+  & button {
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
 }
 
 body {
   width: 60vw;
   height: 45vw;
-  & .start {
+  & .startup {
     width: 100%;
     height: 100%;
     background-color: black;
@@ -25,10 +30,7 @@ body {
     justify-content: center;
     align-items: center;
     &__button {
-      background: none;
-      border: 0px;
       width: 10%;
-      cursor: pointer;
       & img {
         width: 100%;
       }
@@ -38,7 +40,8 @@ body {
     background-color: black;
     width: 100%;
     height: 100%;
-    display: flex;
+
+    display: none;
     flex-direction: column;
     gap: 10%;
     justify-content: center;
@@ -97,7 +100,7 @@ body {
     height: 100%;
     width: 100%;
     background-color: #5a7edc;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     align-items: end;
@@ -113,12 +116,48 @@ body {
     }
   }
   & .desktop {
+    display: none;
     width: 100%;
     height: 100%;
     position: relative;
     background-image: url("../assets/background.png");
     background-size: 100%;
+
+    &-shortcuts {
+      width: max-content;
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      position: relative;
+      top: 0.5vw;
+      left: 0.5vw;
+
+      gap: 1.5vw;
+      &-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 8vw;
+        font-size: 1vw;
+
+        &-image {
+          width: min-content;
+          position: relative;
+          &__icon {
+            width: 4vw;
+          }
+          &__shortcut {
+            position: absolute;
+            top: 3vw;
+            right: 3vw;
+            width: 1vw;
+          }
+        }
+      }
+    }
+
     &-menu {
+      display: none;
       width: 35%;
       height: 50%;
       position: absolute;
@@ -129,6 +168,55 @@ body {
       border-top: 4vw solid #00309c;
       border-top-left-radius: 0.5vw;
       border-top-right-radius: 0.5vw;
+      &-content {
+        height: 100%;
+        width: 50%;
+        background-color: white;
+        position: relative;
+        & h2 {
+          font-size: 1.3vw;
+          position: absolute;
+          bottom: 105%;
+          left: 10%;
+        }
+        &__apps {
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+          gap: 0.5vw;
+          position: relative;
+          top: 0.5vw;
+          left: 0.2vw;
+          & button {
+            display: flex;
+            flex-direction: row;
+            font-size: 0.95vw;
+            justify-content: center;
+            align-items: center;
+            gap: 0.2vw;
+            & img {
+              width: 2.4vw;
+            }
+          }
+        }
+        &__shutdown {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 0.5vw;
+          position: absolute;
+          top: 104.5%;
+          left: 125%;
+          & img {
+            width: 1.6vw;
+          }
+          & p {
+            color: white;
+            font-size: 0.9vw;
+            width: max-content;
+          }
+        }
+      }
     }
 
     &-taskbar {
@@ -141,8 +229,6 @@ body {
       flex-direction: row;
       justify-content: space-between;
       &__start {
-        border: none;
-        cursor: pointer;
         height: 100%;
         width: 15%;
         background-color: #45a945;
@@ -151,7 +237,7 @@ body {
         display: flex;
         flex-direction: row;
         align-items: center;
-        // justify-content: center;
+        justify-content: center;
         gap: 5%;
         & img {
           width: 2vw;
@@ -163,9 +249,42 @@ body {
           margin-right: 25%;
         }
       }
+      &__icons {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        gap: 3%;
+        width: 65%;
+
+        & button {
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          gap: 1vw;
+          padding-left: 1vw;
+          padding-right: 1vw;
+          height: 100%;
+          color: white;
+          font-size: 1vw;
+          // background-color: #5a7edc;
+
+          & img {
+            height: 60%;
+          }
+        }
+      }
       &__time {
         width: 15%;
         background-color: #5a7edc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & p {
+          color: white;
+          font-size: 1vw;
+          position: absolute;
+          right: 3%;
+        }
       }
     }
   }

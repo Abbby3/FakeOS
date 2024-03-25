@@ -13,12 +13,17 @@
 * p {
   font-family: Tahoma, sans-serif;
 }
+* button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
 
 body {
   width: 60vw;
   height: 45vw;
 }
-body .start {
+body .startup {
   width: 100%;
   height: 100%;
   background-color: black;
@@ -26,20 +31,17 @@ body .start {
   justify-content: center;
   align-items: center;
 }
-body .start__button {
-  background: none;
-  border: 0px;
+body .startup__button {
   width: 10%;
-  cursor: pointer;
 }
-body .start__button img {
+body .startup__button img {
   width: 100%;
 }
 body .loading {
   background-color: black;
   width: 100%;
   height: 100%;
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 10%;
   justify-content: center;
@@ -96,7 +98,7 @@ body .welcome {
   height: 100%;
   width: 100%;
   background-color: #5a7edc;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   align-items: end;
@@ -112,13 +114,45 @@ body .welcome h1 {
   font-size: 3vw;
 }
 body .desktop {
+  display: none;
   width: 100%;
   height: 100%;
   position: relative;
   background-image: url("../assets/background.png");
   background-size: 100%;
 }
+body .desktop-shortcuts {
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  position: relative;
+  top: 0.5vw;
+  left: 0.5vw;
+  gap: 1.5vw;
+}
+body .desktop-shortcuts-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 8vw;
+  font-size: 1vw;
+}
+body .desktop-shortcuts-btn-image {
+  width: min-content;
+  position: relative;
+}
+body .desktop-shortcuts-btn-image__icon {
+  width: 4vw;
+}
+body .desktop-shortcuts-btn-image__shortcut {
+  position: absolute;
+  top: 3vw;
+  right: 3vw;
+  width: 1vw;
+}
 body .desktop-menu {
+  display: none;
   width: 35%;
   height: 50%;
   position: absolute;
@@ -129,6 +163,55 @@ body .desktop-menu {
   border-top: 4vw solid #00309c;
   border-top-left-radius: 0.5vw;
   border-top-right-radius: 0.5vw;
+}
+body .desktop-menu-content {
+  height: 100%;
+  width: 50%;
+  background-color: white;
+  position: relative;
+}
+body .desktop-menu-content h2 {
+  font-size: 1.3vw;
+  position: absolute;
+  bottom: 105%;
+  left: 10%;
+}
+body .desktop-menu-content__apps {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.5vw;
+  position: relative;
+  top: 0.5vw;
+  left: 0.2vw;
+}
+body .desktop-menu-content__apps button {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.95vw;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2vw;
+}
+body .desktop-menu-content__apps button img {
+  width: 2.4vw;
+}
+body .desktop-menu-content__shutdown {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5vw;
+  position: absolute;
+  top: 104.5%;
+  left: 125%;
+}
+body .desktop-menu-content__shutdown img {
+  width: 1.6vw;
+}
+body .desktop-menu-content__shutdown p {
+  color: white;
+  font-size: 0.9vw;
+  width: max-content;
 }
 body .desktop-taskbar {
   width: 100%;
@@ -141,8 +224,6 @@ body .desktop-taskbar {
   justify-content: space-between;
 }
 body .desktop-taskbar__start {
-  border: none;
-  cursor: pointer;
   height: 100%;
   width: 15%;
   background-color: #45a945;
@@ -151,6 +232,7 @@ body .desktop-taskbar__start {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   gap: 5%;
 }
 body .desktop-taskbar__start img {
@@ -162,9 +244,39 @@ body .desktop-taskbar__start h2 {
   font-size: 1.7vw;
   margin-right: 25%;
 }
+body .desktop-taskbar__icons {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  gap: 3%;
+  width: 65%;
+}
+body .desktop-taskbar__icons button {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 1vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  height: 100%;
+  color: white;
+  font-size: 1vw;
+}
+body .desktop-taskbar__icons button img {
+  height: 60%;
+}
 body .desktop-taskbar__time {
   width: 15%;
   background-color: #5a7edc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .desktop-taskbar__time p {
+  color: white;
+  font-size: 1vw;
+  position: absolute;
+  right: 3%;
 }
 
 /*# sourceMappingURL=style.css.map */

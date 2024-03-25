@@ -3,20 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>WindowsXP</title>
     <link rel="stylesheet" href="./styles/style.css" />
-    <script type="module" src="./scripts/script.js"></script>
+    <script src="./scripts/script.js" defer></script>
   </head>
   <body>
     <!-- Start Screen -->
-    <!-- <div class="start">
-      <button class="start__button">
-        <img src="./assets/start.png" alt="Start button" />
+    <div class="startup" id="startup">
+      <button class="startup__button" id="startupBtn">
+        <img src="./assets/start.png" alt="Startup button" />
       </button>
-    </div> -->
+    </div>
 
     <!-- Loading screen -->
-    <!-- <div class="loading">
+    <div class="loading" id="loading">
       <div class="loading-logo">
         <div class="loading-logo__top">
           <h2><sub>Microsoft</sub></h2>
@@ -29,24 +29,108 @@
         <div></div>
         <div></div>
       </div>
-    </div> -->
+    </div>
 
     <!-- Welcome screen -->
-    <!-- <div class="welcome">
+    <div class="welcome" id="welcome">
+      <audio id="welcomeSound" src="./assets/welcome.mp3" type="audio/mpeg">
+        Windows XP startup sound
+      </audio>
       <div></div>
       <h1>welcome</h1>
       <div></div>
-    </div> -->
+    </div>
 
     <!-- Desktop -->
-    <div class="desktop">
-      <div class="desktop-menu"></div>
+    <div class="desktop" id="desktop">
+      <div class="desktop-shortcuts">
+        <button class="desktop-shortcuts-btn">
+          <div class="desktop-shortcuts-btn-image">
+            <img
+              class="desktop-shortcuts-btn-image__icon"
+              src="./assets/explorer-icon.png"
+              alt="Internet Explorer shortcut"
+            />
+            <img class="desktop-shortcuts-btn-image__shortcut" src="./assets/shortcut.png" />
+          </div>
+          <p>Internet Explorer - Shortcut</p>
+        </button>
+
+        <button class="desktop-shortcuts-btn">
+          <div class="desktop-shortcuts-btn-image">
+            <img
+              class="desktop-shortcuts-btn-image__icon"
+              src="./assets/pvz-icon.png"
+              alt="Plants vs Zombies shortcut"
+            />
+            <img class="desktop-shortcuts-btn-image__shortcut" src="./assets/shortcut.png" />
+          </div>
+          <p>Plants vs Zombies - Shortcut</p>
+        </button>
+
+        <button class="desktop-shortcuts-btn">
+          <div class="desktop-shortcuts-btn-image">
+            <img
+              class="desktop-shortcuts-btn-image__icon"
+              src="./assets/peggle-icon.png"
+              alt="Peggle shortcut"
+            />
+            <img class="desktop-shortcuts-btn-image__shortcut" src="./assets/shortcut.png" />
+          </div>
+          <p>Peggle - Shortcut</p>
+        </button>
+      </div>
+
+      <div class="desktop-menu" id="menu">
+        <div class="desktop-menu-content">
+          <h2>Administrator</h2>
+
+          <div class="desktop-menu-content__apps">
+            <button>
+              <img src="./assets/explorer-icon.png" alt="Internet Explorer icon" />
+              <p>Internet Explorer</p>
+            </button>
+            <button>
+              <img src="./assets/pvz-icon.png" alt="Plants vs Zombies icon" />
+              <p>PvZ</p>
+            </button>
+            <button>
+              <img src="./assets/peggle-icon.png" alt="Peggle icon" />
+              <p>Peggle</p>
+            </button>
+          </div>
+
+          <button class="desktop-menu-content__shutdown" id="power">
+            <img src="./assets/power.png" alt="Power button" />
+            <p>Shut Down</p>
+          </button>
+        </div>
+      </div>
+
       <div class="desktop-taskbar">
-        <button class="desktop-taskbar__start">
+        <button class="desktop-taskbar__start" id="start">
           <img src="./assets/windows-logo.png" alt="Windows logo" />
           <h2>start</h2>
         </button>
-        <div class="desktop-taskbar__time"></div>
+
+        <div class="desktop-taskbar__icons">
+          <button>
+            <img src="./assets/explorer-icon.png" alt="Internet Explorer icon" />
+            <!-- <p>Internet Explorer</p> -->
+          </button>
+          <button>
+            <img src="./assets/pvz-icon.png" alt="Plants vs Zombies icon" />
+            <!-- <p>PvZ</p> -->
+          </button>
+          <button>
+            <img src="./assets/peggle-icon.png" alt="Peggle icon" />
+            <!-- <p>Peggle</p> -->
+          </button>
+        </div>
+
+        <div class="desktop-taskbar__time">
+          <p id="time"></p>
+        </div>
       </div>
     </div>
   </body>
