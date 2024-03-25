@@ -114,12 +114,149 @@ body .welcome h1 {
   font-size: 3vw;
 }
 body .desktop {
-  display: none;
+  display: block;
   width: 100%;
   height: 100%;
   position: relative;
   background-image: url("../assets/background.png");
   background-size: 100%;
+}
+body .desktop-window {
+  display: none;
+  position: absolute;
+  left: 30%;
+  top: 3%;
+  height: 35vw;
+  width: 35vw;
+  border: 0.2vw solid #00309c;
+  border-top: 2vw solid #00309c;
+  border-top-left-radius: 0.5vw;
+  border-top-right-radius: 0.5vw;
+  background-color: white;
+}
+body .desktop-window__escape {
+  width: 1.2vw;
+  position: absolute;
+  top: -1.55vw;
+  right: 0.3vw;
+}
+body .desktop-window-explorer {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+}
+body .desktop-window-explorer-address {
+  margin-top: 0%;
+  font-size: 1vw;
+  display: flex;
+  height: 5%;
+  flex-direction: row;
+  gap: 0.5vw;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+  background-color: #eeecdb;
+}
+body .desktop-window-explorer-address__url {
+  width: 100%;
+  height: 85%;
+  border: 0.1vw solid black;
+}
+body .desktop-window-explorer-address button {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5vw;
+  align-items: center;
+  font-size: 1vw;
+}
+body .desktop-window-explorer-address__search {
+  width: 1.5vw;
+}
+body .desktop-window-explorer-favourites {
+  border: 0.1vw solid black;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+  gap: 0.5vw;
+  font-size: 1vw;
+  height: 5%;
+}
+body .desktop-window-explorer-favourites p {
+  font-weight: bold;
+}
+body .desktop-window-explorer-pages {
+  width: 35vw;
+  height: 35vw;
+}
+body .desktop-window-explorer-pages-google {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+body .desktop-window-explorer-pages-google img {
+  width: 20vw;
+}
+body .desktop-window-explorer-pages-google__input {
+  width: 20vw;
+  height: 1.6vw;
+  border: 0.1vw solid black;
+  font-size: 1.2vw;
+}
+body .desktop-window-explorer-pages-google__btn {
+  width: 5vw;
+  height: 1.6vw;
+  background-color: #ebebeb;
+  border: 0.1vw solid #c2c2c2;
+  font-size: 1.2vw;
+}
+body .desktop-window-explorer-pages-facebook {
+  display: block;
+  height: 100%;
+  background-color: #e8eaee;
+}
+body .desktop-window-explorer-pages-facebook__header {
+  padding: 0.2vw;
+  padding-left: 1vw;
+  font-size: 2vw;
+  background-color: #4c7da8;
+  margin-bottom: 1vw;
+}
+body .desktop-window-explorer-pages-facebook-content {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+}
+body .desktop-window-explorer-pages-facebook-content h2 {
+  color: black;
+  font-size: 2vw;
+  margin-bottom: 1vw;
+}
+body .desktop-window-explorer-pages-facebook-content img {
+  width: 9vw;
+  height: 12vw;
+  margin-left: 1vw;
+}
+body .desktop-window-explorer-pages-facebook-content-posts__post {
+  font-size: 1.3vw;
+  background-color: white;
+  width: 23vw;
+  height: max-content;
+}
+body .desktop-window-explorer-pages-error {
+  font-size: 1.3vw;
+  display: none;
+  flex-direction: column;
+  gap: 1vw;
 }
 body .desktop-shortcuts {
   width: max-content;

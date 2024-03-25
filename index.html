@@ -9,14 +9,14 @@
   </head>
   <body>
     <!-- Start Screen -->
-    <div class="startup" id="startup">
+    <!-- <div class="startup" id="startup">
       <button class="startup__button" id="startupBtn">
         <img src="./assets/start.png" alt="Startup button" />
       </button>
-    </div>
+    </div> -->
 
     <!-- Loading screen -->
-    <div class="loading" id="loading">
+    <!-- <div class="loading" id="loading">
       <div class="loading-logo">
         <div class="loading-logo__top">
           <h2><sub>Microsoft</sub></h2>
@@ -29,22 +29,98 @@
         <div></div>
         <div></div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Welcome screen -->
-    <div class="welcome" id="welcome">
+    <!-- <div class="welcome" id="welcome">
       <audio id="welcomeSound" src="./assets/welcome.mp3" type="audio/mpeg">
         Windows XP startup sound
       </audio>
       <div></div>
       <h1>welcome</h1>
       <div></div>
-    </div>
+    </div> -->
 
     <!-- Desktop -->
     <div class="desktop" id="desktop">
+      <!-- applications -->
+      <div class="desktop-window" id="app">
+        <button id="esc">
+          <img class="desktop-window__escape" src="./assets/escape.png" alt="escape button" />
+        </button>
+
+        <div class="desktop-window-explorer" id="explorer">
+          <div class="desktop-window-explorer-address">
+            <p>Address</p>
+            <input class="desktop-window-explorer-address__url" type="text" id="goURL" />
+            <button id="go">
+              <img
+                class="desktop-window-explorer-address__search"
+                src="./assets/search.png"
+                alt="search button"
+              />
+              <p>Go</p>
+            </button>
+          </div>
+
+          <div class="desktop-window-explorer-favourites">
+            <p>Search</p>
+            <a href="" id="googleLink">Google</a>
+            <a href="" id="facebookLink">Facebook</a>
+          </div>
+
+          <div class="desktop-window-explorer-pages">
+            <div class="desktop-window-explorer-pages-google" id="google">
+              <img src="./assets/google-logo.png" alt="Google logo" />
+              <div>
+                <input
+                  class="desktop-window-explorer-pages-google__input"
+                  type="text"
+                  id="searchURL"
+                />
+                <button class="desktop-window-explorer-pages-google__btn" id="search">
+                  Search
+                </button>
+              </div>
+            </div>
+
+            <div class="desktop-window-explorer-pages-facebook" id="facebook">
+              <h1 class="desktop-window-explorer-pages-facebook__header">facebook</h1>
+
+              <div class="desktop-window-explorer-pages-facebook-content">
+                <img src="./assets/mark.png" alt="profile picture" />
+
+                <div class="desktop-window-explorer-pages-facebook-content-posts">
+                  <h2>John Smith</h2>
+                  <div class="desktop-window-explorer-pages-facebook-content-posts__post">
+                    <h3>My Post!</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                      nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                      eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                      in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="desktop-window-explorer-pages-error" id="error">
+              <h3>HTTP Error 404</h3>
+              <p>
+                404 Not Found<br />The Web server cannot find the file or script you asked for.
+                Please check the URL to ensure that the path is correct. Please contact the server's
+                administrator if this problem persists.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- shortcuts -->
       <div class="desktop-shortcuts">
-        <button class="desktop-shortcuts-btn">
+        <button class="desktop-shortcuts-btn" id="explorerS">
           <div class="desktop-shortcuts-btn-image">
             <img
               class="desktop-shortcuts-btn-image__icon"
@@ -55,7 +131,6 @@
           </div>
           <p>Internet Explorer - Shortcut</p>
         </button>
-
         <button class="desktop-shortcuts-btn">
           <div class="desktop-shortcuts-btn-image">
             <img
@@ -67,7 +142,6 @@
           </div>
           <p>Plants vs Zombies - Shortcut</p>
         </button>
-
         <button class="desktop-shortcuts-btn">
           <div class="desktop-shortcuts-btn-image">
             <img
@@ -81,12 +155,13 @@
         </button>
       </div>
 
+      <!-- start menu -->
       <div class="desktop-menu" id="menu">
         <div class="desktop-menu-content">
           <h2>Administrator</h2>
 
           <div class="desktop-menu-content__apps">
-            <button>
+            <button id="explorerM">
               <img src="./assets/explorer-icon.png" alt="Internet Explorer icon" />
               <p>Internet Explorer</p>
             </button>
@@ -107,6 +182,7 @@
         </div>
       </div>
 
+      <!-- taskbar -->
       <div class="desktop-taskbar">
         <button class="desktop-taskbar__start" id="start">
           <img src="./assets/windows-logo.png" alt="Windows logo" />
@@ -114,7 +190,7 @@
         </button>
 
         <div class="desktop-taskbar__icons">
-          <button>
+          <button id="explorerT">
             <img src="./assets/explorer-icon.png" alt="Internet Explorer icon" />
             <!-- <p>Internet Explorer</p> -->
           </button>
