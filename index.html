@@ -9,14 +9,14 @@
   </head>
   <body>
     <!-- Start Screen -->
-    <!-- <div class="startup" id="startup">
+    <div class="startup" id="startup">
       <button class="startup__button" id="startupBtn">
         <img src="./assets/start.png" alt="Startup button" />
       </button>
-    </div> -->
+    </div>
 
     <!-- Loading screen -->
-    <!-- <div class="loading" id="loading">
+    <div class="loading" id="loading">
       <div class="loading-logo">
         <div class="loading-logo__top">
           <h2><sub>Microsoft</sub></h2>
@@ -29,17 +29,17 @@
         <div></div>
         <div></div>
       </div>
-    </div> -->
+    </div>
 
     <!-- Welcome screen -->
-    <!-- <div class="welcome" id="welcome">
+    <div class="welcome" id="welcome">
       <audio id="welcomeSound" src="./assets/welcome.mp3" type="audio/mpeg">
         Windows XP startup sound
       </audio>
       <div></div>
       <h1>welcome</h1>
       <div></div>
-    </div> -->
+    </div>
 
     <!-- Desktop -->
     <div class="desktop" id="desktop">
@@ -116,6 +116,29 @@
             </div>
           </div>
         </div>
+
+        <div class="desktop-window-even" id="even">
+          <h2>Enter your number!</h2>
+          <input type="number" id="evenInput" />
+          <button id="evenBtn">Even or Odd?</button>
+          <div id="result"></div>
+        </div>
+
+        <div class="desktop-window-tic" id="tic">
+          <h3>Tic Tac Toe</h3>
+          <div class="desktop-window-tic-game">
+            <button id="btnA"></button>
+            <button id="btnB"></button>
+            <button id="btnC"></button>
+            <button id="btnD"></button>
+            <button id="btnE"></button>
+            <button id="btnF"></button>
+            <button id="btnG"></button>
+            <button id="btnH"></button>
+            <button id="btnI"></button>
+          </div>
+          <h3 id="ending"></h3>
+        </div>
       </div>
 
       <!-- shortcuts -->
@@ -131,27 +154,27 @@
           </div>
           <p>Internet Explorer - Shortcut</p>
         </button>
-        <button class="desktop-shortcuts-btn">
+        <button class="desktop-shortcuts-btn" id="evenS">
           <div class="desktop-shortcuts-btn-image">
             <img
               class="desktop-shortcuts-btn-image__icon"
-              src="./assets/pvz-icon.png"
-              alt="Plants vs Zombies shortcut"
+              src="./assets/even-icon.png"
+              alt="Even or Odd shortcut"
             />
             <img class="desktop-shortcuts-btn-image__shortcut" src="./assets/shortcut.png" />
           </div>
-          <p>Plants vs Zombies - Shortcut</p>
+          <p>Even or Odd - Shortcut</p>
         </button>
-        <button class="desktop-shortcuts-btn">
+        <button class="desktop-shortcuts-btn" id="ticS">
           <div class="desktop-shortcuts-btn-image">
             <img
               class="desktop-shortcuts-btn-image__icon"
-              src="./assets/peggle-icon.png"
-              alt="Peggle shortcut"
+              src="./assets/tic-icon.png"
+              alt="Tic Tac Toe shortcut"
             />
             <img class="desktop-shortcuts-btn-image__shortcut" src="./assets/shortcut.png" />
           </div>
-          <p>Peggle - Shortcut</p>
+          <p>Tic Tac Toe - Shortcut</p>
         </button>
       </div>
 
@@ -165,13 +188,13 @@
               <img src="./assets/explorer-icon.png" alt="Internet Explorer icon" />
               <p>Internet Explorer</p>
             </button>
-            <button>
-              <img src="./assets/pvz-icon.png" alt="Plants vs Zombies icon" />
-              <p>PvZ</p>
+            <button id="evenM">
+              <img src="./assets/even-icon.png" alt="Even or Odd icon" />
+              <p>Even or Odd</p>
             </button>
-            <button>
-              <img src="./assets/peggle-icon.png" alt="Peggle icon" />
-              <p>Peggle</p>
+            <button id="ticM">
+              <img src="./assets/tic-icon.png" alt="Tic Tac Toe icon" />
+              <p>Tic Tac Toe</p>
             </button>
           </div>
 
@@ -194,13 +217,13 @@
             <img src="./assets/explorer-icon.png" alt="Internet Explorer icon" />
             <!-- <p>Internet Explorer</p> -->
           </button>
-          <button>
-            <img src="./assets/pvz-icon.png" alt="Plants vs Zombies icon" />
-            <!-- <p>PvZ</p> -->
+          <button id="evenT">
+            <img src="./assets/even-icon.png" alt="Even or Odd icon" />
+            <!-- <p>Even or Odd</p> -->
           </button>
-          <button>
-            <img src="./assets/peggle-icon.png" alt="Peggle icon" />
-            <!-- <p>Peggle</p> -->
+          <button id="ticT">
+            <img src="./assets/tic-icon.png" alt="Tic Tac Toe icon" />
+            <!-- <p>Tic Tac Toe</p> -->
           </button>
         </div>
 
