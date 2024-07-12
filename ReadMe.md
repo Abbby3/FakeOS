@@ -1,9 +1,43 @@
-## This project is to setup a fake operating system, with three functional applications.
+# FakeOS
 
-The project was required to be a single page application with selectable icons that open applications. It was to be able to close the applications, include a start menu, and display the current time. Additionally, it was to use Javascript functions to enable the use of buttons, rather than the onclick html attribute, and to use arrow syntax for functions.
+## Snippets
 
-This instance is modelled after Windows XP, and uses either scss or assets made in MS Paint for visuals. Current features include a prestart screen and shut down button to emulate turning on and off a computer, and a 4:3 ratio to emulate less recent screens. In addition, each element is either tied to the viewport or it's parent element, so the resolution scales equally with every screen size.
+![UI Example](UI.png)
 
-The applications chosen are a mockup of Internet Explorer with Google, Facebook and error pages, and functional search bars, an app that allows a number input, and tells the user if the number is even or odd, or a funcional self-resetting, two-player Tic Tac Toe board.
+## Description
 
-Future iterations are to include a restart and search button in the start menu, minimise and fullscreen buttons on the windows as well as window titles, drag and drop functionality on the windows and shortcut icons, and optimised Javascript.
+FakeOS is a web application that simulates an operating system interface. The project aims to help explore and consolidate my understanding of HTML, CSS, and JavaScript by replicating the layout and format of a given design. The application features a wallpaper that scales to fit the viewport, selectable icons, a menu, and a display for the current time. When an icon is selected, it will open an "app" in a modal, which can also be closed.
+
+### Tech Stack
+
+- HTML
+- CSS (SCSS)
+- JavaScript
+
+## Features
+
+- SPA (Single Page Application) structure.
+- Selectable icons that open apps in modals.
+- Functional apps.
+- Selectable menu displaying a list of text and icons.
+- Display of the current time.
+
+## Build Steps
+
+1.  Clone the repository.
+
+```shell
+git clone https://github.com/Abbby3/FakeOS
+```
+
+2.  Navigate to the project directory.
+
+```shell
+cd FakeOS
+```
+
+3.  Open the application.
+
+```shell
+start index.html
+```
